@@ -3,7 +3,7 @@
     <video ref='videoPlayer' class='video-js shadow-xl' data-setup='{}' width='400px' height='200px'></video>
     <Button class='bg-green-400' name='Canal 1' url='https://5975e06a1f292.streamlock.net:4443/sanluistv/ngrp:sanluistv_all/playlist.m3u8?PlaylistM3UCL' @change-event='change'></Button>
     <Button class='bg-red-400' name='Canal 2' url='https://593b04c4c5670.streamlock.net:443/8018/8018/playlist.m3u8?PlaylistM3UCL' @change-event='change'></Button>
-    <Button class='bg-blue-400' name='Canal 3' url='http://azxtv.com/hls/stream.m3u8?PlaylistM3UCL' @change-event='change'></Button>
+    <Button class='bg-blue-400' name='Canal 3' url='https://azxtv.com/hls/stream.m3u8?PlaylistM3UCL' @change-event='change'></Button>
   </div>
 </template>
 
