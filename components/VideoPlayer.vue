@@ -10,19 +10,23 @@ import videojs from 'video.js';
 
 export default {
   name: "VideoPlayer",
-  props: {
-    options: {
-      type: Object,
-      required: true
-    }
-  },
   data() {
     return {
-      player: null
+      player: null,
+      videoOptions: {
+        autoplay: true,
+        controls: true,
+        sources: [
+          {
+            src: "https://vdo1.streamgato.us:3776/stream/play.m3u8?PlaylistM3UCL",
+            type: "application/x-mpegURL"
+          }
+        ]
+      }
     }
   },
   mounted() {
-    this.player = videojs(this.$refs.videoPlayer, this.options, function onPlayerReady() {
+    this.player = videojs(this.$refs.videoPlayer, this.videoOptions, function onPlayerReady() {
       // eslint-disable-next-line no-console
       console.log('onPlayerReady', this);
       this.player.src("https://vdo1.streamgato.us:3776/stream/play.m3u8?PlaylistM3UCL")

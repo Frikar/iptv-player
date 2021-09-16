@@ -6,7 +6,7 @@
         <p class="leading-relaxed font-medium text-lg text-justify md:text-center xl:w-2/4 lg:w-3/4 mx-1 md:mx-auto mb-5">Demo del IPTV en Vue + Nuxt</p>
       </div>
       <div class='flex justify-center'>
-        <VideoPlayer :options='videoOptions'></VideoPlayer>
+        <VideoPlayer></VideoPlayer>
       </div>
     </div>
   </main>
@@ -22,16 +22,6 @@ export default {
   data() {
     return {
       show: false,
-      videoOptions: {
-        autoplay: true,
-        controls: true,
-        sources: [
-          {
-            src: "https://vdo1.streamgato.us:3776/stream/play.m3u8?PlaylistM3UCL",
-            type: "application/x-mpegURL"
-          }
-        ]
-      }
     }
   }
 }
