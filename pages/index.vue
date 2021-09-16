@@ -27,8 +27,7 @@ export default {
         controls: true,
         sources: [
           {
-            src:
-              "https://vdo1.streamgato.us:3776/stream/play.m3u8?PlaylistM3UCL",
+            src: "https://vdo1.streamgato.us:3776/stream/play.m3u8?PlaylistM3UCL",
             type: "application/x-mpegURL"
           }
         ]

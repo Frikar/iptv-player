@@ -13,9 +13,7 @@ export default {
   props: {
     options: {
       type: Object,
-      default() {
-        return {};
-      }
+      required: true
     }
   },
   data() {
@@ -28,6 +26,11 @@ export default {
       // eslint-disable-next-line no-console
       console.log('onPlayerReady', this);
     })
+  },
+  beforeDestroy() {
+    if (this.player) {
+      this.player.dispose()
+    }
   },
   methods: {
     change() {
