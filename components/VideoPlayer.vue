@@ -1,6 +1,8 @@
 <template>
   <div>
+    <client-only>
     <video ref="videoPlayer" class="video-js shadow-xl" width="640" height="268" data-setup='{}'></video>
+    </client-only>
     <button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded shadow-2xl" @click='change'>Cambiar canal</button>
   </div>
 </template>
