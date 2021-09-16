@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import videojs from 'video.js'
 import VideoPlayer from '~/components/VideoPlayer'
 
 export default {
@@ -23,8 +22,8 @@ export default {
   data() {
     return {
       show: false,
-      player: '',
       videoOptions: {
+        autoplay: true,
         controls: true,
         sources: [
           {
@@ -34,13 +33,6 @@ export default {
           }
         ]
       }
-    }
-  },
-  methods: {
-    changeChannel(video) {
-      this.player = video
-      console.log(this.player)
-      this.videoOptions.sources[0].src = "https://5975e06a1f292.streamlock.net:4443/sanluistv/ngrp:sanluistv_all/playlist.m3u8?PlaylistM3UCL"
     }
   }
 }
