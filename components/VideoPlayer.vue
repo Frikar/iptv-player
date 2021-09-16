@@ -25,6 +25,7 @@ export default {
     this.player = videojs(this.$refs.videoPlayer, this.options, function onPlayerReady() {
       // eslint-disable-next-line no-console
       console.log('onPlayerReady', this);
+      this.player.src("https://vdo1.streamgato.us:3776/stream/play.m3u8?PlaylistM3UCL")
     })
   },
   beforeDestroy() {
